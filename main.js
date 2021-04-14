@@ -114,20 +114,21 @@ console.log(fiver(5.3) === "odd")
 console.log(fiver(5.5) === "odd")
 console.log(fiver(5.2) === "odd")
 
+
+
 // Validate the array to confirm it has no empty strings
 function validateArray (array) {
-    let valid = true
     for (let index = 0; index < array.length; index += 1) {
         let string = array[index]
         if (string === "") {
-            valid = false
+            return false
         }
     }
 
-    return valid
+    return true
 }
 
 let strings1 = ["2", "acs", "howdy"]
-let strings2 = ["2", "acs", "howdy", ""]
+let strings2 = ["2", "", "acs", "howdy", ""]
 console.log(validateArray(strings1) === true)
 console.log(validateArray(strings2) === false)
